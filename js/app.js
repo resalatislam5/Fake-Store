@@ -84,18 +84,27 @@ const search =async(searchId) =>{
                 noFound.classList.add('hidden')
             });
         }
+        spiner(false)
 }
 // search-ber
 document.getElementById('default-search').addEventListener('keypress', async(event)=>{
     if(event.key == 'Enter'){
         search('default-search')
-        
     }
-
+    spiner(true)
 })
 // btn-click 
 document.getElementById('btn-search').addEventListener('click', function(){
-    search('default-search')      
+    search('default-search')  
+    spiner(true)    
 })
-displayProducts();
+function spiner(text) {
+    const spiner = document.getElementById('spiner')
+    if(text == true){
+        spiner.classList.remove('hidden')
+    }else{
+        spiner.classList.add('hidden')
+    }
+}
+// displayProducts();
 displaySideBer()
