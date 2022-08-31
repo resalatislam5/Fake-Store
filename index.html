@@ -12,7 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
+    <header class="mt-10">
         <!-- search  -->
             <form class="container mx-auto">   
                 <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
@@ -25,10 +25,19 @@
                 </div>
             </form>
     </header>
-    <main>
-        <section class="flex">
-            <div class="w-52">1</div>
-            <div>2</div>
+    <main class="container mx-auto">
+        <section class="flex mt-12">
+            <div class="w-2/12">
+                <ul id="side-ber" class="bg-blue-500 text-white pl-5  py-10 rounded-lg">
+
+                </ul>
+            </div>
+            <!-- show products -->
+            <div>
+                <div id="show-products" class="grid grid-cols-3 gap-4">
+
+                </div>
+            </div>
         </section>
     </main>
 
